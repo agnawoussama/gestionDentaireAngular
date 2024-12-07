@@ -1,0 +1,29 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Documents du Participant</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="document-list p-4 bg-light shadow rounded">
+        <div class="row mb-3 align-items-center fw-bold border-bottom pb-2">
+          <div class="col-md-4">Nom</div>
+          <div class="col-md-4">Catégorie</div>
+          <div class="col-md-2 text-end">Action</div>
+        </div>
+        <div *ngFor="let document of documents" class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <span class="document-name">{{ document.nom }}</span>
+          </div>
+          <div class="col-md-4">
+            <span class="document-category">{{ document.categorieNom }}</span>
+          </div>
+          <div class="col-md-2 text-end">
+            <button mat-icon-button color="primary" (click)="telechargerDocument(document)">
+              <mat-icon>download</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
+  

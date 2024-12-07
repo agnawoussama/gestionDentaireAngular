@@ -1,0 +1,113 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Ajouter un RendezVous</mat-card-title>
+    </mat-card-header>
+    <form (ngSubmit)="ajouterRendezVous()" class="p-4 bg-light shadow rounded">
+      <!-- Date -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-md-4">
+          <label for="date" class="form-label">Date</label>
+        </div>
+        <div class="col-md-8">
+          <input
+            type="datetime-local"
+            id="date"
+            class="form-control"
+            [(ngModel)]="rendezvous.date"
+            name="date"
+            placeholder="Entrez la date"
+            required
+          />
+        </div>
+      </div>
+  
+      <!-- Description -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-md-4">
+          <label for="description" class="form-label">Description</label>
+        </div>
+        <div class="col-md-8">
+          <input
+            type="text"
+            id="description"
+            class="form-control"
+            [(ngModel)]="rendezvous.description"
+            name="description"
+            placeholder="Entrez la description"
+            required
+          />
+        </div>
+      </div>
+  
+      <!-- Patient -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-md-4">
+          <label for="patient" class="form-label">Patient</label>
+        </div>
+        <div class="col-md-8">
+          <select
+            id="patient"
+            class="form-select"
+            [(ngModel)]="rendezvous.patientId"
+            name="patientId"
+            required
+          >
+            <option value="" disabled selected>Sélectionnez un patient</option>
+            <option *ngFor="let patient of patients" [value]="patient.id">
+              {{ patient.nom }} {{ patient.prenom }}
+            </option>
+          </select>
+        </div>
+      </div>
+  
+      <!-- Dentiste -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-md-4">
+          <label for="dentiste" class="form-label">Dentiste</label>
+        </div>
+        <div class="col-md-8">
+          <select
+            id="dentiste"
+            class="form-select"
+            [(ngModel)]="rendezvous.dentisteId"
+            name="dentisteId"
+            required
+          >
+            <option value="" disabled selected>Sélectionnez un dentiste</option>
+            <option *ngFor="let dentiste of dentistes" [value]="dentiste.id">
+              {{ dentiste.nom }} {{ dentiste.prenom }}
+            </option>
+          </select>
+        </div>
+      </div>
+  
+      <!-- Soin -->
+    <div class="row mb-3 align-items-center">
+        <div class="col-md-4">
+          <label for="soin" class="form-label">Soin</label>
+        </div>
+        <div class="col-md-8">
+          <select
+            id="soin"
+            class="form-select"
+            [(ngModel)]="rendezvous.soinId"
+            name="soinId"
+            required
+          >
+            <option value="" disabled selected>Sélectionnez un soin</option>
+            <option *ngFor="let soin of soins" [value]="soin.id">
+              {{ soin.type }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+  
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button mat-raised-button color="primary" type="submit" class="btn btn-primary w-100">
+          Ajouter
+        </button>
+      </div>
+    </form>
+  </mat-card>

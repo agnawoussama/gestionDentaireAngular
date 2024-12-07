@@ -1,0 +1,33 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { 
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  padding: 20px;
+}
+
+.dashboard-card {
+  margin: 15px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.stats-card {
+  text-align: center;
+}
+
+.stats-card mat-icon {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.chart-container {
+  height: 300px;
+}

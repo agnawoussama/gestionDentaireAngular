@@ -1,0 +1,65 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Modifier un Dentiste</mat-card-title>
+    </mat-card-header>
+      <form (ngSubmit)="modifierDentiste()" class="p-4 bg-light shadow rounded">
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <label for="nom" class="form-label">Nom</label>
+          </div>
+          <div class="col-md-8">
+            <input
+              type="text"
+              id="nom"
+              class="form-control"
+              [(ngModel)]="dentiste.nom"
+              name="nom"
+              placeholder="Entrez le nom"
+              required
+            />
+          </div>
+        </div>
+        
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <label for="prenom" class="form-label">Prénom</label>
+          </div>
+          <div class="col-md-8">
+            <input
+              type="text"
+              id="prenom"
+              class="form-control"
+              [(ngModel)]="dentiste.prenom"
+              name="prenom"
+              placeholder="Entrez le prénom"
+              required
+            />
+          </div>
+        </div>
+        
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <label for="specialite" class="form-label">Specialite</label>
+          </div>
+          <div class="col-md-8">
+            <input
+              type="text"
+              id="specialite"
+              class="form-control"
+              [(ngModel)]="dentiste.specialite"
+              name="specialite"
+              placeholder="Entrez la specialité"
+              required
+            />
+          </div>
+        </div>
+       
+        
+        <div class="text-center">
+          <button mat-raised-button color="primary" type="submit" class="btn btn-primary w-100">
+            Modifier
+          </button>
+        </div>
+      </form>
+  </mat-card>
+  

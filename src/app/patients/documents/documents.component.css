@@ -1,0 +1,40 @@
+mat-card {
+    max-width: 500px !important;
+    margin: 20px auto;
+  }
+  
+  mat-card-header {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .document-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .document-name {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  button mat-icon {
+    font-size: 24px;
+  }
+  
+  button {
+    align-self: flex-end;
+  }
+
+  .document-name, .document-category {
+    font-size: 16px;
+    color: #333;
+  }
+  

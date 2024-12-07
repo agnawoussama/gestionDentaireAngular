@@ -1,0 +1,79 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Ajouter un Patient</mat-card-title>
+    </mat-card-header>
+      <form (ngSubmit)="ajouterPatient()" class="p-4 bg-light shadow rounded">
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <label for="nom" class="form-label">Nom</label>
+          </div>
+          <div class="col-md-8">
+            <input
+              type="text"
+              id="nom"
+              class="form-control"
+              [(ngModel)]="patient.nom"
+              name="nom"
+              placeholder="Entrez le nom"
+              required
+            />
+          </div>
+        </div>
+        
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <label for="prenom" class="form-label">Prénom</label>
+          </div>
+          <div class="col-md-8">
+            <input
+              type="text"
+              id="prenom"
+              class="form-control"
+              [(ngModel)]="patient.prenom"
+              name="prenom"
+              placeholder="Entrez le prénom"
+              required
+            />
+          </div>
+        </div>
+        
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <label for="age" class="form-label">Âge</label>
+          </div>
+          <div class="col-md-8">
+            <input
+              type="number"
+              id="age"
+              class="form-control"
+              [(ngModel)]="patient.age"
+              name="age"
+              placeholder="Entrez l'âge"
+              required
+            />
+          </div>
+        </div>
+        
+        <div class="row mb-3 align-items-center">
+          <div class="col-md-4">
+            <label for="derniereVisite" class="form-label">Dernière Visite</label>
+          </div>
+          <div class="col-md-8">
+            <input
+              type="date"
+              id="derniereVisite"
+              class="form-control"
+              [(ngModel)]="patient.derniereVisite"
+              name="derniereVisite"
+            />
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <button mat-raised-button color="primary" type="submit" class="btn btn-primary w-100">
+            Ajouter
+          </button>
+        </div>
+      </form>
+  </mat-card>
+  
